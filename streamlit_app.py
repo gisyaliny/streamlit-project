@@ -9,7 +9,7 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Split-Map", "icon": "map"},
+    {"func": heatmap.app, "title": "Building", "icon": "map"},
     {"func": vector.app, "title": "Vector", "icon": "geo-alt"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
 ]
