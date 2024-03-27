@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import home, heatmap, upload, vector  # import your app modules here
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -9,7 +9,8 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
+    {"func": heatmap.app, "title": "Split-Map", "icon": "map"},
+    {"func": vector.app, "title": "Vector", "icon": "geo-alt"},
     {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
 ]
 
@@ -36,11 +37,13 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
+        This [web app](https://gisyaliny.streamlit.app/) is maintained by [Yalin Yang](https://gisyaliny.github.io/). You can follow me on social media:
+            [GitHub](https://github.com/gisyaliny) | [LinkedIn](https://www.linkedin.com/in/gisyaliny/).
         
-        Source code: <https://github.com/giswqs/streamlit-template>
+        Source code: <https://github.com/gisyaliny/streamlit-project>
 
+        More Interesting Projects: <https://gisyaliny.github.io/projects/>
+        
         More menu icons: <https://icons.getbootstrap.com>
     """
     )

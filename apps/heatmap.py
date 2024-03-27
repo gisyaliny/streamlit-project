@@ -6,14 +6,14 @@ def app():
 
     st.title("Heatmap")
 
-    filepath = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
-    m = leafmap.Map(tiles="stamentoner")
-    m.add_heatmap(
-        filepath,
-        latitude="latitude",
-        longitude="longitude",
-        value="pop_max",
-        name="Heat map",
-        radius=20,
+    m = leafmap.split_map(
+    left_layer="NLCD 2001 CONUS Land Cover",
+    right_layer="NLCD 2016 CONUS Land Cover",
+    left_label="2001",
+    right_label="2016",
+    label_position="bottom",
+    center=[36.1, -114.9],
+    zoom=10,
     )
+    
     m.to_streamlit(height=700)
